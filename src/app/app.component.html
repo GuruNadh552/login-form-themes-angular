@@ -1,3 +1,21 @@
 <div class="card">
-
+    <h2 class="title" [style.borderColor]="activeColor">
+        Login
+    </h2>
+    <div class="input-group">
+      <input type="text" placeholder="Username">
+    </div>
+    <div class="input-group">
+      <input type="password" placeholder="Password">
+    </div>
+    <div class="input-group btn">
+      <input type="submit" [style.backgroundColor]="activeColor">
+    </div>
+    <div class="route-group">
+      <a>Forgot Password ?</a>
+      <a class="signup">Signup</a>
+    </div>
+</div>
+<div class="color-box">
+  <span *ngFor="let i of COLORS" [style.backgroundColor]="i" [ngClass]="{'active':i==activeColor}" (click)="changeColor(i)"></span>
 </div>
